@@ -17,3 +17,9 @@ npm i -g npm yarn
 
 yarn global add @vue/cli @nestjs/cli typescript
 ```
+
+### SSL 관련 문제
+
+- `self-signed certificate in certificate chain`
+  - 인증서 관련 문제인 경우
+  - => `yarn config set "strict-ssl" false`

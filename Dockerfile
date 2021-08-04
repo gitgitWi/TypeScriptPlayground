@@ -11,4 +11,4 @@ RUN apt autoremove -y
 
 WORKDIR /app
 
-EXPOSE 8080
+EXPOSE 8080 3000 4000 8081

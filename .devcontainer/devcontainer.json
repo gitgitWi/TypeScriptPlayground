@@ -32,7 +32,8 @@
 	"codezombiech.gitignore",
 	"gencer.html-slim-scss-css-class-completion",
 	"mutantdino.resourcemonitor",
-	"ms-vsliveshare.vsliveshare"
+	"ms-vsliveshare.vsliveshare",
+	"foxundermoon.shell-format"
 ]
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.

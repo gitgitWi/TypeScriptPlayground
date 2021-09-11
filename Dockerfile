@@ -24,7 +24,8 @@ RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUS
 COPY ./.setup/.zshrc /root/.zshrc
 SHELL [ "/bin/zsh", "source", "~/.zshrc" ]
 
-WORKDIR /workspaces/
-COPY . /workspaces/
+VOLUME [ "/workspaces/" ]
+# WORKDIR /workspaces/
+# COPY . /workspaces/
 
 EXPOSE 8080 3000 4000 8081

@@ -1,10 +1,18 @@
 {
   "name": "node-ts-playground",
   "packageManager": "yarn@3.0.2",
+  "private": true,
   "devDependencies": {
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
+    "pretty-quick": "^3.1.1",
+    "typescript": "^4.4.3"
   },
   "scripts": {
-    "postinstall": "husky install"
-  }
+    "postinstall": "husky install",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "workspaces": [
+    "playgrounds/*"
+  ]
 }

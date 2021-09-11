@@ -12,4 +12,6 @@ yarn set version berry
 yarn -v
 
 # husky init, install packages
-yarn dlx husky-init --yarn2 && yarn
+yarn
+npx husky set .husky/pre-commit "npx pretty-quick --staged"
+npx husky add .husky/pre-commit "npx lint-staged"

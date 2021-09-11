@@ -23,12 +23,8 @@ RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 COPY ./.setup/.zshrc /root/.zshrc
 SHELL [ "/bin/zsh", "source", "~/.zshrc" ]
-RUN chmod -R 777 ./.setup/install/*
 
 WORKDIR /workspaces/
-
 COPY . /workspaces/
 
 EXPOSE 8080 3000 4000 8081
-
-CMD ["zsh"]

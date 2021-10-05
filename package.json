@@ -13,6 +13,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix"
   },
   "workspaces": [
-    "playgrounds/**/*"
+    "playgrounds/**/*",
+    "!playgrounds/.private"
   ]
 }

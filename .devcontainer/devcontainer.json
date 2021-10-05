@@ -37,7 +37,10 @@
     "fabiospampinato.vscode-highlight",
     "wix.vscode-import-cost",
     "yzhang.markdown-all-in-one",
-    "shd101wyy.markdown-preview-enhanced"
+    "shd101wyy.markdown-preview-enhanced",
+    "helixquar.randomeverything",
+    "syler.sass-indented",
+    "devonray.snippet"
   ]
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.

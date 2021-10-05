@@ -1,0 +1,14 @@
+{
+  "name": "batch",
+  "version": "0.0.1",
+  "description": "Batch Processing in Browser-Node.js",
+  "engines": {
+    "node": ">=14"
+  },
+  "packageManager": "yarn@3.0.2",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitgitWi/TypeScriptPlayground/tree/main/playgrounds/labs/batch"
+  }
+}

@@ -1,46 +1,68 @@
-const { random } = Math;
-
-const NOT_IMPLEMENTED_ERROR_MSG = `Must Implement!`;
+import { ErrorMessages } from "../constants";
+import { range, getRandInt, getHashString } from ".";
 
 /**
  * @interface interface class for dummy generators
  */
+
 class DummyGenerator {
-  protected _generator() {
-    throw new Error(NOT_IMPLEMENTED_ERROR_MSG);
+  protected _generate() {
+    throw new Error(ErrorMessages.NOT_IMPLEMENTED);
   }
 
   getDummy() {
-    throw new Error(NOT_IMPLEMENTED_ERROR_MSG);
+    throw new Error(ErrorMessages.NOT_IMPLEMENTED);
   }
 }
 
 export class StringArrayDummyGenerator extends DummyGenerator {
-  protected _generator() {
-    throw new Error(NOT_IMPLEMENTED_ERROR_MSG);
+  constructor(
+    public arraySize = 100,
+    public stringSize = 10,
+    public arr: string[] = []
+  ) {
+    if (stringSize <= 0 || arraySize <= 0)
+      throw new TypeError(ErrorMessages.INVALID_TYPE);
+
+    super();
+  }
+
+  protected _generate() {
+    for (let _idx of range(this.arraySize)) {
+      this.arr.push(getHashString(this.stringSize));
+    }
+    return this.arr;
   }
 
   getDummy() {
-    throw new Error(NOT_IMPLEMENTED_ERROR_MSG);
+    return this._generate();
   }
 }
 
 export class DimenseOneObjectDummyGenerator extends DummyGenerator {
-  protected _generator() {
-    throw new Error(NOT_IMPLEMENTED_ERROR_MSG);
+  constructor(public obj: Record<string, string> = {}) {
+    super();
+  }
+
+  protected _generate() {
+    throw new Error(ErrorMessages.NOT_IMPLEMENTED);
   }
 
   getDummy() {
-    throw new Error(NOT_IMPLEMENTED_ERROR_MSG);
+    throw new Error(ErrorMessages.NOT_IMPLEMENTED);
   }
 }
 
 export class DimenseTwoObjectDummyGenerator extends DummyGenerator {
-  protected _generator() {
-    throw new Error(NOT_IMPLEMENTED_ERROR_MSG);
+  constructor(public obj: Record<string, unknown> = {}) {
+    super();
+  }
+
+  protected _generate() {
+    throw new Error(ErrorMessages.NOT_IMPLEMENTED);
   }
 
   getDummy() {
-    throw new Error(NOT_IMPLEMENTED_ERROR_MSG);
+    throw new Error(ErrorMessages.NOT_IMPLEMENTED);
   }
 }

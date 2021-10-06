@@ -28,9 +28,14 @@ export class StringArrayDummyGenerator extends DummyGenerator {
   }
 
   protected _generate() {
+    console.info(`---Generating String Array Dummy Data---`);
+    console.time(`time for generating`);
+
     for (let _idx of range(this.arraySize)) {
       this.arr.push(getHashString(this.stringSize));
     }
+
+    console.timeEnd(`time for generating`);
     return this.arr;
   }
 

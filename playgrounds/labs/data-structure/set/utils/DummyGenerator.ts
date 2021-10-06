@@ -22,7 +22,7 @@ export class StringArrayDummyGenerator extends DummyGenerator {
     public arr: string[] = []
   ) {
     if (stringSize <= 0 || arraySize <= 0)
-      throw new TypeError(ErrorMessages.INVALID_TYPE);
+      throw new TypeError(ErrorMessages.INCORRECT_SIZE);
 
     super();
   }

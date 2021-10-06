@@ -1,0 +1,8 @@
+node_modules/
+build/
+dist/
+test/
+
+*rc.js
+*config*
+*ignore*

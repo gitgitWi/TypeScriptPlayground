@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "allowJs": true,
+    "checkJs": true,
+    "sourceMap": false,
+    "importsNotUsedAsValues": "remove",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  }
+}

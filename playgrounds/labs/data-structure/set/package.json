@@ -1,0 +1,14 @@
+{
+  "name": "data-structures-set",
+  "packageManager": "yarn@3.0.2",
+  "private": true,
+  "scripts": {
+    "serve": "nodemon --exec ts-node main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.3",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}

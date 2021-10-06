@@ -1,0 +1,1 @@
+export { stringArrDummy } from "./dummy";

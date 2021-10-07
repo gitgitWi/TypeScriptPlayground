@@ -3,7 +3,9 @@
   "packageManager": "yarn@3.0.2",
   "private": true,
   "scripts": {
-    "serve": "nodemon --exec ts-node main.ts"
+    "serve": "nodemon --exec ts-node ./src/main.ts",
+    "build": "tsc",
+    "start": "node ./dist/main.js"
   },
   "devDependencies": {
     "@types/node": "^16.10.3",

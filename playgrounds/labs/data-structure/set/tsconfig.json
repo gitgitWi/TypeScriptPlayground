@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "outDir": "./dist",
     "module": "CommonJS",
     "allowJs": true,
     "checkJs": true,
@@ -12,6 +13,8 @@
     "useUnknownInCatchVariables": true,
     "alwaysStrict": true,
     "skipDefaultLibCheck": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+  },
+  "include": ["./"],
+  "exclude": ["./dist"]
 }

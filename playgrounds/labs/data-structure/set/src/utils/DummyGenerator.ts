@@ -21,10 +21,9 @@ export class StringArrayDummyGenerator extends DummyGenerator {
     public stringSize = 10,
     public arr: string[] = []
   ) {
+    super();
     if (stringSize <= 0 || arraySize <= 0)
       throw new TypeError(ErrorMessages.INCORRECT_SIZE);
-
-    super();
   }
 
   protected _generate() {

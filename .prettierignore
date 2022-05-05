@@ -3,6 +3,4 @@ build/
 dist/
 test/
 
-*rc.js
-*config*
 *ignore*

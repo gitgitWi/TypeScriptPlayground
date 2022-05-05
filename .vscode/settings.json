@@ -2,8 +2,8 @@
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.printWidth": 120,
-  "prettier.singleQuote": false,
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
   "prettier.endOfLine": "lf",
   "[dockerfile]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"

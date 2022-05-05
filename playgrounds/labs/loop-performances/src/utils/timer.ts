@@ -1,11 +1,18 @@
 /**
  * @see https://developer.mozilla.org/en-US/docs/Web/API/Performance/now
- * - FireFox는 ms 이하 단위 모두 버림, `console.time`도 마찬가지
+ * - FireFox/Safari는 ms 이하 단위 모두 버림, `console.time`도 마찬가지
  */
-export const getPerformanceTimes = (func: Function): number => {
+export const getPerformanceTimes = (func: Function) => {
   const time1 = performance.now();
-  func();
+  const result = func();
   const time2 = performance.now();
 
-  return time2 - time1;
+  return { times: time2 - time1, result };
+};
+
+export const getConsoleTimes = (func: Function, funcName = func.name) => {
+  console.time(`[${funcName}]`);
+  const result = func();
+  console.timeEnd(`[${funcName}]`);
+  return result;
 };

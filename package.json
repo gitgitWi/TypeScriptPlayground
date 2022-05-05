@@ -1,19 +1,23 @@
 {
   "name": "node-ts-playground",
-  "packageManager": "yarn@3.0.2",
+  "author": {
+    "name": "gitgitWi",
+    "email": "wiii@kakao.com"
+  },
+  "repository": {
+    "url": "https://github.com/gitgitWi/TypeScriptPlayground.git"
+  },
   "private": true,
+  "scripts": {},
+  "workspaces": {
+    "packages": [
+      "playgrounds/**/*",
+      "!playgrounds/.private"
+    ],
+    "nohoist": []
+  },
+  "packageManager": "yarn@1.23.0",
   "devDependencies": {
-    "husky": "^7.0.0",
-    "lint-staged": "^11.1.2",
-    "pretty-quick": "^3.1.1",
     "typescript": "^4.4.3"
-  },
-  "scripts": {
-    "postinstall": "husky install",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix"
-  },
-  "workspaces": [
-    "playgrounds/**/*",
-    "!playgrounds/.private"
-  ]
+  }
 }

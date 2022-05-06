@@ -10,9 +10,14 @@ export const getPerformanceTimes = (func: Function) => {
   return { times: time2 - time1, result };
 };
 
-export const getConsoleTimes = (func: Function, funcName = func.name) => {
-  console.time(`[${funcName}]`);
+export const getConsoleTimes = (
+  func: Function,
+  funcName = func.name,
+  { description = '' } = {}
+) => {
+  const timerKey = `[${funcName}] ${description}`;
+  console.time(timerKey);
   const result = func();
-  console.timeEnd(`[${funcName}]`);
+  console.timeEnd(timerKey);
   return result;
 };

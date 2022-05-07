@@ -2302,6 +2302,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/better-sqlite3@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "@types/better-sqlite3@npm:7.5.0"
+  dependencies:
+    "@types/node": "*"
+  checksum: 8ff28d9ad2c315544fe16b223d7106c013555ea86ca2a2f2bf9c0931976763b1093db0dc1d7a6e67f0ed45264b15f66157afb45f8dd80896a3bb80efd87e800f
+  languageName: node
+  linkType: hard
+
 "@types/cookiejar@npm:*":
   version: 2.1.2
   resolution: "@types/cookiejar@npm:2.1.2"
@@ -4336,12 +4345,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"db-clients@workspace:playgrounds/utils/db-clients":
+"db-repositories@workspace:playgrounds/utils/db-repositories":
   version: 0.0.0-use.local
-  resolution: "db-clients@workspace:playgrounds/utils/db-clients"
+  resolution: "db-repositories@workspace:playgrounds/utils/db-repositories"
   dependencies:
+    "@types/better-sqlite3": ^7.5.0
     better-sqlite3: ^7.5.1
     microbundle: ^0.15.0
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -11245,7 +11256,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.1.3, typescript@npm:^4.3.5, typescript@npm:^4.4.3, typescript@npm:^4.5.4, typescript@npm:^4.6.3":
+"typescript@npm:^4.1.3, typescript@npm:^4.3.5, typescript@npm:^4.4.3, typescript@npm:^4.5.4, typescript@npm:^4.6.3, typescript@npm:^4.6.4":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -11265,7 +11276,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.1.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.1.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"
   bin:

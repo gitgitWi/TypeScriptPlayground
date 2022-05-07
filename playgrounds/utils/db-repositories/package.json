@@ -1,0 +1,26 @@
+{
+  "name": "db-repositories",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "source": "src/index.ts",
+  "type": "module",
+  "exports": {
+    "require": "./dist/db-repositories.cjs",
+    "import": "./dist/db-repositories.modern.js"
+  },
+  "main": "./dist/db-repositories.umd.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle build src/index.ts",
+    "serve": "microbundle watch src/index.ts"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.0"
+  },
+  "dependencies": {
+    "@types/better-sqlite3": "^7.5.0",
+    "better-sqlite3": "^7.5.1",
+    "typescript": "^4.6.4"
+  }
+}

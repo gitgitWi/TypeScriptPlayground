@@ -41,8 +41,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:playgrounds/labs/loop-performances"\
       },\
       {\
-        "name": "db-clients",\
-        "reference": "workspace:playgrounds/utils/db-clients"\
+        "name": "db-repositories",\
+        "reference": "workspace:playgrounds/utils/db-repositories"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["adapter-pattern-server", ["workspace:playgrounds/labs/adapter-pattern/server"]],\
       ["batch", ["workspace:playgrounds/labs/batch"]],\
       ["data-structures-set", ["workspace:playgrounds/labs/data-structure/set"]],\
-      ["db-clients", ["workspace:playgrounds/utils/db-clients"]],\
+      ["db-repositories", ["workspace:playgrounds/utils/db-repositories"]],\
       ["loop-performances", ["workspace:playgrounds/labs/loop-performances"]],\
       ["node-ts-playground", ["workspace:."]]\
     ],\
@@ -3858,6 +3858,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/better-sqlite3", [\
+        ["npm:7.5.0", {\
+          "packageLocation": "./.yarn/cache/@types-better-sqlite3-npm-7.5.0-a51a613339-8ff28d9ad2.zip/node_modules/@types/better-sqlite3/",\
+          "packageDependencies": [\
+            ["@types/better-sqlite3", "npm:7.5.0"],\
+            ["@types/node", "npm:17.0.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/cookiejar", [\
         ["npm:2.1.2", {\
           "packageLocation": "./.yarn/cache/@types-cookiejar-npm-2.1.2-2588120a7c-f6e1903454.zip/node_modules/@types/cookiejar/",\
@@ -6418,13 +6428,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
-      ["db-clients", [\
-        ["workspace:playgrounds/utils/db-clients", {\
-          "packageLocation": "./playgrounds/utils/db-clients/",\
+      ["db-repositories", [\
+        ["workspace:playgrounds/utils/db-repositories", {\
+          "packageLocation": "./playgrounds/utils/db-repositories/",\
           "packageDependencies": [\
-            ["db-clients", "workspace:playgrounds/utils/db-clients"],\
+            ["db-repositories", "workspace:playgrounds/utils/db-repositories"],\
+            ["@types/better-sqlite3", "npm:7.5.0"],\
             ["better-sqlite3", "npm:7.5.1"],\
-            ["microbundle", "npm:0.15.0"]\
+            ["microbundle", "npm:0.15.0"],\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\

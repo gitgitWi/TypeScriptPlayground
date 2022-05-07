@@ -1,5 +1,5 @@
-export * from './repositories';
-export * from './types';
+// export * from './repositories';
+// export * from './types';
 
 import { SqliteRepository } from './repositories';
 
@@ -16,8 +16,8 @@ import { SqliteRepository } from './repositories';
         isPrimary: true,
         needAutoIncrement: true,
       },
-      // 종목명
-      stockName: {
+      // 종목코드
+      stockCode: {
         type: 'TEXT',
         isUnique: true,
         needNotNull: true,
@@ -55,4 +55,9 @@ import { SqliteRepository } from './repositories';
       },
     },
   });
+
+  repo.selectTable(tableName);
+
+  const readResult = repo.readByKey({ keyColumn: 'stockCode', keyValue: '005930' });
+  console.log({ readResult });
 })();

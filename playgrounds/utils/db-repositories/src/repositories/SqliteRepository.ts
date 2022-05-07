@@ -24,6 +24,9 @@ interface CreateTableProps {
 /** @todo 전역 상수 옮기기 */
 export const IS_ENV_PRODUCTION = process.env.NODE_ENV === 'production';
 
+/**
+ * @todo logger 유틸 추가
+ */
 export class SqliteRepository extends Repository {
   private readonly db: Database;
   private table!: string;
@@ -32,14 +35,30 @@ export class SqliteRepository extends Repository {
     super();
     this.db = new Sqlite(
       dbFile,
-      Object.assign({ verbose: IS_ENV_PRODUCTION ? null : console.log } as Options, dbOptions)
+      Object.assign(
+        {
+          verbose: IS_ENV_PRODUCTION
+            ? null
+            : (l) => console.log(`[${new Date().toLocaleString('ko')}][Sqlite/Query]\n${l}\n`),
+        } as Options,
+        dbOptions
+      )
     );
   }
 
   selectTable(table: string): this {
     this.table = table;
-    const showTables = this.db.exec(`.tables`);
-    console.log({ showTables });
+    try {
+      const showTables = this.db.prepare(`SELECT * FROM sqlite_master WHERE type='table'`).all();
+      if (!showTables.find(({ name }) => name === table))
+        throw Error(
+          `[${new Date().toLocaleString(
+            'ko'
+          )}][SqliteRepository.selectTable] table ${table} NOT FOUND! MUST create table first..`
+        );
+    } catch (error) {
+      console.error(error);
+    }
     return this;
   }
 
@@ -99,8 +118,25 @@ export class SqliteRepository extends Repository {
       .join(', ')})`;
   }
 
-  public readByKey<T = UnknownRecord>(key: string, selectors?: string[]): void | T {
-    throw new Error('Method not implemented.');
+  public readByKey<T = UnknownRecord>(
+    key: { keyColumn: string; keyValue: string },
+    selectors?: string[]
+  ): void | T[] {
+    try {
+      return this.db.prepare(this.getReadByKeyPreparedStatement(key, selectors)).all();
+    } catch (error) {
+      console.error(`[${new Date().toLocaleString('ko')}][SqliteRepository.readByKey]\n`, error);
+      return;
+    }
+  }
+
+  private getReadByKeyPreparedStatement(
+    { keyColumn, keyValue }: { keyColumn: string; keyValue: string },
+    selectors?: string[]
+  ): string {
+    return `SELECT ${selectors ? selectors.join(', ') : '*'} FROM ${
+      this.table
+    } WHERE ${keyColumn}=${keyValue}`;
   }
 
   protected readAll<T = UnknownRecord>(): T[] {

@@ -2,7 +2,7 @@
 
 ## 프로젝트 구조
 
-- Monorepo: `yarn workspaces`
+- Monorepo: `yarn berry`+ `workspace-tools`
 
 ### `labs`
 

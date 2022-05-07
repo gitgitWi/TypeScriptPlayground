@@ -1,4 +1,4 @@
-type UnknownRecord = Record<string, any>;
+import { UnknownRecord } from '../types';
 
 export abstract class Repository {
   public abstract insert<T = UnknownRecord>(values: T | T[]): boolean;

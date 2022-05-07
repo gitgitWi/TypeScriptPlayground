@@ -115,3 +115,7 @@ dist
 .vscode-test
 
 .DS_Store
+
+.yarn/cache
+.yarn/unplugged
+.yarn/install-state.gz

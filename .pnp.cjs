@@ -6048,6 +6048,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["concurrently", [\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/concurrently-npm-7.1.0-d3983cf1fe-723996afc7.zip/node_modules/concurrently/",\
+          "packageDependencies": [\
+            ["concurrently", "npm:7.1.0"],\
+            ["chalk", "npm:4.1.2"],\
+            ["date-fns", "npm:2.28.0"],\
+            ["lodash", "npm:4.17.21"],\
+            ["rxjs", "npm:6.6.7"],\
+            ["spawn-command", "npm:0.0.2"],\
+            ["supports-color", "npm:8.1.1"],\
+            ["tree-kill", "npm:1.2.2"],\
+            ["yargs", "npm:16.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["configstore", [\
         ["npm:5.0.1", {\
           "packageLocation": "./.yarn/cache/configstore-npm-5.0.1-739433cdc5-60ef65d493.zip/node_modules/configstore/",\
@@ -6428,6 +6445,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
+      ["date-fns", [\
+        ["npm:2.28.0", {\
+          "packageLocation": "./.yarn/cache/date-fns-npm-2.28.0-c19c5add1b-a0516b2e4f.zip/node_modules/date-fns/",\
+          "packageDependencies": [\
+            ["date-fns", "npm:2.28.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["db-repositories", [\
         ["workspace:playgrounds/utils/db-repositories", {\
           "packageLocation": "./playgrounds/utils/db-repositories/",\
@@ -6435,7 +6461,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["db-repositories", "workspace:playgrounds/utils/db-repositories"],\
             ["@types/better-sqlite3", "npm:7.5.0"],\
             ["better-sqlite3", "npm:7.5.1"],\
+            ["concurrently", "npm:7.1.0"],\
             ["microbundle", "npm:0.15.0"],\
+            ["nodemon", "npm:2.0.16"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
@@ -13779,6 +13807,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["spawn-command", [\
+        ["npm:0.0.2", {\
+          "packageLocation": "./.yarn/cache/spawn-command-npm-0.0.2-014d4d5d9f-e35c5d2817.zip/node_modules/spawn-command/",\
+          "packageDependencies": [\
+            ["spawn-command", "npm:0.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["sprintf-js", [\
         ["npm:1.0.3", {\
           "packageLocation": "./.yarn/cache/sprintf-js-npm-1.0.3-73f0a322fa-19d79aec21.zip/node_modules/sprintf-js/",\
@@ -15315,6 +15352,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["yargs", [\
+        ["npm:16.2.0", {\
+          "packageLocation": "./.yarn/cache/yargs-npm-16.2.0-547873d425-b14afbb51e.zip/node_modules/yargs/",\
+          "packageDependencies": [\
+            ["yargs", "npm:16.2.0"],\
+            ["cliui", "npm:7.0.4"],\
+            ["escalade", "npm:3.1.1"],\
+            ["get-caller-file", "npm:2.0.5"],\
+            ["require-directory", "npm:2.1.1"],\
+            ["string-width", "npm:4.2.3"],\
+            ["y18n", "npm:5.0.8"],\
+            ["yargs-parser", "npm:20.2.9"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:17.4.1", {\
           "packageLocation": "./.yarn/cache/yargs-npm-17.4.1-f5d309f85f-e901232287.zip/node_modules/yargs/",\
           "packageDependencies": [\

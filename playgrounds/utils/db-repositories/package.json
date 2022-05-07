@@ -12,11 +12,15 @@
   "main": "./dist/db-repositories.umd.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "microbundle build src/index.ts",
-    "serve": "microbundle watch src/index.ts"
+    "build": "microbundle --external nodemon,concurrently build src/index.ts",
+    "build:watch": "microbundle watch src/index.ts",
+    "start": "node ./dist/db-repositories.cjs",
+    "serve": "concurrently -k \"yarn build:watch\" \"nodemon ./dist/db-repositories.cjs\""
   },
   "devDependencies": {
-    "microbundle": "^0.15.0"
+    "concurrently": "^7.1.0",
+    "microbundle": "^0.15.0",
+    "nodemon": "^2.0.16"
   },
   "dependencies": {
     "@types/better-sqlite3": "^7.5.0",
